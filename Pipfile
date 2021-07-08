@@ -11,6 +11,7 @@ black = "*"
 transformers = "*"
 pydantic = "*"
 django = "==2.2.5"
+pillow = "*"
 
 [requires]
 python_version = "3.8"
