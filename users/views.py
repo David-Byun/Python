@@ -82,12 +82,12 @@ def github_callback(request):
         client_secret = os.environ.get("GH_SECRET")
         code = request.GET.get("code", None)
         if code is not None:
-            result = requests.post(
+            token_request = requests.post(
                 f"https://github.com/login/oauth/access_token?client_id={client_id}&client_secret={client_secret}&code={code}",
                 headers={"Accept": "application/json"},
             )
-            result_json = result.json()
-            error = result_json.get("error", None)
+            token_json = token_request.json()
+            error = token_json.get("error", None)
             if error is not None:
                 raise GithubException()
             else:
