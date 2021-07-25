@@ -16,6 +16,7 @@ django-countries = "*"
 django-seed = "*"
 django-dotenv = "*"
 django-smtp-ssl = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"
