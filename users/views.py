@@ -93,7 +93,7 @@ def github_callback(request):
             if error is not None:
                 raise GithubException()
             else:
-                access_token = result_json.get("access_token")
+                access_token = token_json.get("access_token")
                 profile_request = requests.get(
                     "https://api.github.com/user",
                     headers={
