@@ -16,6 +16,10 @@
   @apply font-light text-lg text-center rounded-sm py-5 w-full;
 }
 
+.btn-link {
+  @apply font-light text-lg text-center rounded-lg py-3 w-full text-white bg-red-500;
+}
+
 input {
   @apply font-light text-lg rounded-sm py-5 w-full border border-gray-600 text-left px-5 focus:outline-none focus:border-blue-500;
 }
