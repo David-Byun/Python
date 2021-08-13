@@ -26,9 +26,20 @@ class ConversationDetailView(View):
         conversation = models.Conversation.objects.get_or_none(pk=pk)
         if not conversation:
             raise Http404()
-        form = forms.AddCommentForm()
         return render(
             self.request,
             "conversations/conversation_detail.html",
-            {"conversation": conversation, "form": form},
+            {"conversation": conversation},
         )
+
+    def post(self, *args, **kwargs):
+        message = self.request.POST.get("message", None)
+        pk = kwargs.get("pk")
+        conversation = models.Conversation.objects.get_or_none(pk=pk)
+        if not conversation:
+            raise Http404()
+        if message is not None:
+            models.Message.objects.create(
+                message=message, user=self.request.user, conversation=conversation
+            )
+        return redirect(reverse("conversations:detail", kwargs={"pk": pk}))
