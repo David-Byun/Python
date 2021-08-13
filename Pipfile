@@ -4,24 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-flake8 = "*"
-black = "*"
 awsebcli = "*"
 
 [packages]
-transformers = "*"
-pydantic = "*"
-django = "==2.2.5"
-pillow = "*"
-django-countries = "*"
-django-seed = "*"
-django-dotenv = "*"
-django-smtp-ssl = "*"
-requests = "*"
-pipenv-to-requirements = "*"
+pathspec = "*"
+django = "*"
 
 [requires]
 python_version = "3.8"
-
-[pipenv]
-allow_prereleases = true
