@@ -1,5 +1,5 @@
 from django.contrib import admin
 
 
-class Admin():
+class Admina():
     pass  # Register your models here.

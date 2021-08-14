@@ -8,12 +8,15 @@ flake8 = "*"
 black = "*"
 
 [packages]
-django = "*"
+django = "==3.0"
 pillow = "*"
 django-seed = "*"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
 
 [pipenv]
 allow_prereleases = true
