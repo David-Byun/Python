@@ -10,13 +10,13 @@ black = "*"
 [packages]
 django = "==2.2.5"
 pillow = "*"
-django-countries = "*"
 django-seed = "*"
 django-dotenv = "*"
 requests = "*"
 sentry-sdk = "==0.13.2"
 django-storages = "*"
 boto3 = "*"
+django-countries = "*"
 
 [requires]
 python_version = "3.8"
