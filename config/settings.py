@@ -46,7 +46,9 @@ PROJECT_APPS = [
     "rooms.apps.RoomsConfig",
 ]
 
-THIRD_PARTY_APPS = ["rest_framework", ]
+THIRD_PARTY_APPS = [
+    "rest_framework",
+]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
@@ -135,6 +137,10 @@ AUTH_USER_MODEL = "users.User"
 
 # Django Rest Framework
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE' : 10,
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "config.authentication.JWTAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
 }
