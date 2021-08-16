@@ -25,11 +25,12 @@ SECRET_KEY = os.environ.get(
     "DJANGO_SECRET_KEY", "cn$6&j3@pw6a5)_t0+5z_alnfehguj6!-v(g@4_)7i@mxlie)3"
 )
 
+SITE_ID = 1
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DEBUG"))
+DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = []  # 로컬 테스트를 위해 등록
+ALLOWED_HOSTS = ["airbnb20210813.herokuapp.com", "127.0.0.1"]  # 로컬 테스트를 위해 등록
 # Application definition
 
 DJANGO_APPS = [
@@ -147,6 +148,8 @@ USE_TZ = False
 
 STATIC_URL = "/static/"
 
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 AUTH_USER_MODEL = "users.User"
@@ -176,3 +179,9 @@ LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
 
 # Language
 LANGUAGE_COOKIE_NAME = "django_language"
+
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES["default"].update(db_from_env)
