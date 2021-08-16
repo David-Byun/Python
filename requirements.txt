@@ -59,4 +59,3 @@ wcwidth==0.1.9
 websocket-client==0.59.0
 psycopg2-binary==2.9.1
 psycopg2==2.9.1
-postgresql==13.4
