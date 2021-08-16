@@ -30,7 +30,11 @@ SITE_ID = 1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = ["airbnb20210813.herokuapp.com", "127.0.0.1"]  # 로컬 테스트를 위해 등록
+ALLOWED_HOSTS = [
+    "airbnb20210813.herokuapp.com",
+    "127.0.0.1",
+    "glacial-hamlet-83496.herokuapp.com",
+]  # 로컬 테스트를 위해 등록
 # Application definition
 
 DJANGO_APPS = [
