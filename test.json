@@ -8,5 +8,6 @@
 "address": "Seoul, Korea",
 "pet_friendly": true,
 "kind": "private_room",
-"category":2
+"category":2,
+"amenities":[1,2,3,4]
 }
