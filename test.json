@@ -1,0 +1,12 @@
+{
+    "name": "Hous created with DRF",
+    "country": "Korea",
+    "city": "Seoul",
+    "price": 100000,
+    "rooms": 3,
+    "toilets": 2,
+    "description": "DRF is greate!",
+    "address": "Seoul, Korea",
+    "pet_friendly": true,
+    "kind": "private_room"
+}
