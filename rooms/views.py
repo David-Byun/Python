@@ -110,7 +110,10 @@ class RoomDetail(APIView):
 
     def get(self, request, pk):
         room = self.get_object(pk)
-        serializers = RoomDetailSerializer(room)
+        serializers = RoomDetailSerializer(
+            room,
+            context={"request": request},
+        )
         return Response(serializers.data)
 
     def put(self, request, pk):
