@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+
+.search-box {
+  transition: box-shadow 0.2s liner;
+}
+
+.nav_link {
+  @apply ml-6 border-b-2 border-white hover:border-gray-600 h-full flex items-center;
+  a {
+    @apply py-10 px-5;
+  }
+}
+
+.btn {
+  @apply font-light text-lg text-center rounded-sm py-5 w-full;
+}
+
+.btn-link {
+  @apply font-light text-lg text-center rounded-lg py-3 w-full text-white bg-red-500;
+}
+
+input {
+  @apply font-light text-lg rounded-sm py-5 w-full border border-gray-600 text-left px-5 focus:outline-none focus:border-blue-500;
+}
+
+select {
+  @apply font-light text-lg rounded-sm py-5 w-full border border-gray-600 text-left px-5 focus:outline-none focus:border-blue-500;
+}
+
+select {
+  height: 70px;
+}
+
+textarea {
+  @apply font-light text-lg rounded-sm py-5 w-full border border-gray-600 text-left px-5 focus:outline-none focus:border-blue-500;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+form {
+  .input {
+    @apply mb-3;
+    &.has_error {
+      input {
+        @apply bg-red-200 border-gray-400;
+        &:focus {
+          @apply border-gray-600;
+        }
+      }
+    }
+  }
+}
+
+@keyframes messageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(50px);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.message {
+  animation: messageFadeIn 5s ease forwards;
+  &.error {
+    @apply bg-gray-600;
+  }
+  &.info {
+    @apply bg-blue-500;
+  }
+  &.success {
+    @apply bg-green-500;
+  }
+  &.warning {
+    @apply bg-yellow-400;
+  }
+}
+
+.border-section {
+  @apply border-b border-gray-400 pb-8 mt-8;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+@tailwind utilities;

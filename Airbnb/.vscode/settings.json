@@ -1,0 +1,22 @@
+{
+    "python.pythonPath": "/Users/david/.local/share/virtualenvs/Airbnb-bYr_aYAi/bin/python",
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.linting.flake8Args": ["--max-line-length=91"],
+    "python.linting.cornflakesArgs": [
+        "--max-line-length=91"
+    ],
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.experimental.classRegex": [
+    
+    ],
+    "css.validate": false,
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "html"
+      },
+    "editor.quickSuggestions": {
+        "strings": true
+      }
+}
