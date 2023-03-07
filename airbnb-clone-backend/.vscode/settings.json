@@ -1,0 +1,9 @@
+{
+  "workbench.colorTheme": "Community Material Theme",
+  "workbench.preferredDarkColorTheme": "Community Material Theme",
+  "workbench.preferredHighContrastColorTheme": "Community Material Theme",
+  "workbench.preferredLightColorTheme": "Community Material Theme",
+  "python.pythonPath": "/Users/david/Library/Caches/pypoetry/virtualenvs/airbnb-clone-backend-10lJmpFH-py3.10/bin/python",
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black"
+}
